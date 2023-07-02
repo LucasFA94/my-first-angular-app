@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-servers',
   //selector: '[app-servers]',
   //selector: '.app-server',
   templateUrl: './servers.component.html',
-  styleUrls: ['./servers.component.css']
+  styleUrls: ['./servers.component.css'],
 })
 export class ServersComponent implements OnInit{
 
   allowNewServer: boolean = false;
   serverCreationStatus: string = "No server was created";
-  serverName = '';
+  serverName = 'Test Server';
 
 
   constructor() {
@@ -23,7 +25,7 @@ export class ServersComponent implements OnInit{
   }
 
   onCreateServer() {
-    this.serverCreationStatus= "Server was created"
+    this.serverCreationStatus= "Server was created! Name is "+this.serverName
   }
 
   onUpdateServerName(event: any) {
